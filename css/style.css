@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #d4d4d4;
+  height: 100px;
+}
+
+.header__logo {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+  color: #5671F6;
+  text-decoration: none;
+  margin: 0 35px;
+}
+
+.header__search {
+  background-image: url("../img/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 35px;
+  margin-left: 35px;
+}
+
+.header__search::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+}
+
+.header__search:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+}
+
+.header__search::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+}
+
+.header__search::placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+}
+
+.header__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #d4d4d4;
+}
+
+.header__menu {
+  margin-right: 45px;
+  margin-left: auto;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 21px;
+  color: #363636;
+  text-decoration: none;
+}
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__button {
+  font-size: 18px;
+  line-height: 21px;
+  color: #5671F6;
+  background-color: transparent;
+  padding: 40px 40px;
+}
+
+.header__button_active {
+  color: #ffffff;
+  background: #5671F6;
+}
