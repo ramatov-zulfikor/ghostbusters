@@ -28,12 +28,29 @@ $mainFontSize: 18px;
 $mainLineHeight: 21px;
 
 .header {
+   position: relative;
+
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background-color: #fff;
+      border-bottom: 1px solid #d4d4d4;
+   }
+
    &__row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #d4d4d4;
+      position: relative;
       height: 100px;
+      z-index: 1;
    }
 
    &__logo {
@@ -67,7 +84,7 @@ $mainLineHeight: 21px;
    }
 
    &__menu {
-      margin-right: 45px;
+      margin-right: 35px;
       margin-left: auto;
    }
 
@@ -100,11 +117,188 @@ $mainLineHeight: 21px;
       line-height: $mainLineHeight;
       color: #5671F6;
       background-color: transparent;
-      padding: 40px 40px;
+      padding: 40px 35px;
+      cursor: pointer;
 
       &_active {
          color: #ffffff;
          background: #5671F6;
+      }
+   }
+}
+
+@media (max-width: 1080px) {
+   body.lock {
+      overflow: hidden;
+   }
+
+   .header {
+      &__row {
+         z-index: auto;
+      }
+
+      &__logo {
+         position: relative;
+         z-index: 9;
+      }
+
+      &__line {
+         display: none;
+      }
+
+      &__search {
+         position: relative;
+         z-index: 9;
+         width: 20px;
+         margin-left: auto;
+         margin-right: 30px;
+         padding-left: 0;
+
+         &::placeholder {
+            font-size: 0;
+         }
+      }
+
+      &__burger {
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 20px;
+         margin-right: 35px;
+         z-index: 9;
+
+         &::before,
+         &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transition: all 0.2s;
+         }
+
+         &::before {
+            top: 0;
+         }
+
+         &::after {
+            bottom: 0;
+         }
+
+         & span {
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+         }
+
+         &.active::before,
+         &.active::after {
+            top: 9px;
+         }
+
+         &.active::before {
+            transform: rotate(45deg);
+         }
+
+         &.active::after {
+            transform: rotate(-45deg);
+         }
+
+         &.active span {
+            transform: scale(0);
+         }
+      }
+
+      &__menu {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #5671F6;
+         transition: all 0.3s;
+         overflow: auto;
+
+         &.active {
+            top: 0;
+         }
+
+         &::after {
+            content: '';
+            display: flex;
+            width: 100px;
+            height: 1px;
+            margin: 0 auto;
+            margin-top: 75px;
+            background-color: #fff;
+         }
+      }
+
+      &__list {
+         display: block;
+         text-align: center;
+         margin-top: 200px;
+      }
+
+      &__item {
+         &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 20px;
+         }
+      }
+
+      &__link {
+         color: #ffffff;
+      }
+
+      &__buttons {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         margin-top: 500px;
+         transition: all 0.3s;
+
+         &.active {
+            top: 0;
+         }
+      }
+
+      &__button {
+         color: #ffffff;
+         padding: 0;
+
+         &:first-child {
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+}
+
+@media (max-width: 767px) {
+   .header {
+      &::before {
+         height: 100%;
+      }
+
+      &__row {
+         height: 70px;
+      }
+
+      &__list {
+         margin-top: 150px;
+      }
+
+      &__buttons {
+         margin-top: 450px;
       }
    }
 }

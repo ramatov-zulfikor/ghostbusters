@@ -29,6 +29,22 @@ body {
   min-height: 100%;
 }
 
+.header {
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
 .header__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,7 +56,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #d4d4d4;
+  position: relative;
   height: 100px;
+  z-index: 1;
 }
 
 .header__logo {
@@ -92,7 +110,7 @@ body {
 }
 
 .header__menu {
-  margin-right: 45px;
+  margin-right: 35px;
   margin-left: auto;
 }
 
@@ -131,10 +149,175 @@ body {
   line-height: 21px;
   color: #5671F6;
   background-color: transparent;
-  padding: 40px 40px;
+  padding: 40px 35px;
+  cursor: pointer;
 }
 
 .header__button_active {
   color: #ffffff;
   background: #5671F6;
+}
+
+@media (max-width: 1080px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header__row {
+    z-index: auto;
+  }
+  .header__logo {
+    position: relative;
+    z-index: 9;
+  }
+  .header__line {
+    display: none;
+  }
+  .header__search {
+    position: relative;
+    z-index: 9;
+    width: 20px;
+    margin-left: auto;
+    margin-right: 30px;
+    padding-left: 0;
+  }
+  .header__search::-webkit-input-placeholder {
+    font-size: 0;
+  }
+  .header__search:-ms-input-placeholder {
+    font-size: 0;
+  }
+  .header__search::-ms-input-placeholder {
+    font-size: 0;
+  }
+  .header__search::placeholder {
+    font-size: 0;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin-right: 35px;
+    z-index: 9;
+  }
+  .header__burger::before, .header__burger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .header__burger.active::before, .header__burger.active::after {
+    top: 9px;
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5671F6;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: auto;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+  .header__menu::after {
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 75px;
+    background-color: #fff;
+  }
+  .header__list {
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+  }
+  .header__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header__link {
+    color: #ffffff;
+  }
+  .header__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    margin-top: 500px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__buttons.active {
+    top: 0;
+  }
+  .header__button {
+    color: #ffffff;
+    padding: 0;
+  }
+  .header__button:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header::before {
+    height: 100%;
+  }
+  .header__row {
+    height: 70px;
+  }
+  .header__list {
+    margin-top: 150px;
+  }
+  .header__buttons {
+    margin-top: 450px;
+  }
 }
