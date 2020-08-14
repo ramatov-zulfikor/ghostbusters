@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Ghostbusters</title>
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,6 +34,7 @@
                </ul>
             </nav>
             <!-- /.header__menu -->
+
             <span class="header__line header__line_mobile"></span>
             <div class="header__buttons">
                <button class="header__button">Регистрация</button>
@@ -45,10 +47,90 @@
       </header>
       <!-- /.header -->
 
+      <main class="main">
+
+
+         <section class="film">
+            <div class="container">
+               <div class="film__row">
+
+                  <div class="film__banner">
+                     <div class="film__poster">
+                        <img src="img/poster.png" alt="poster">
+                        <a class="film__button" data-fancybox href="https://www.youtube.com/watch?v=ahZFCF--uRY"><span></span>Посмотреть трейлер</a>
+                     </div>
+                     <!-- /.film__poster -->
+                  </div>
+                  <!-- /.film__banner -->
+
+                  <div class="film__about">
+                     <h1 class="film__title">Охотники за привидениями: <br> Наследники</h1>
+                     <h3 class="film__subtitle">Ghostbusters: Afterlife</h3>
+                     <p class="film__text">
+                        Мать-одиночка с двумя детьми-подростками селится на старой ферме в Оклахоме, полученной в наследство от отца, которого она не знала. Дети пытаются больше узнать о своем деде и находят автомобиль Ecto-1, принадлежавший знаменитым охотникам за привидениями.
+                     </p>
+                     <div class="film__info">
+                        <div class="film__info-left">
+                           <span class="film__info-item">
+                              <strong>Режиссер</strong>
+                              <span>Джейсон Райтман</span>
+                           </span>
+                           <span class="film__info-item">
+                              <strong>Сценарий</strong>
+                              <span>Дэн Эйкройд</span>
+                           </span>
+                           <span class="film__info-item">
+                              <strong>Премьера</strong>
+                              <span>09.07.2020 (РФ)</span>
+                           </span>
+                        </div>
+                        <div class="film__info-right">
+                           <span class="film__info-item">
+                              <strong>Бюджет</strong>
+                              <span>1 000 000 $</span>
+                           </span>
+                           <span class="film__info-item">
+                              <strong>Кинопрокат</strong>
+                              <span>SPPR</span>
+                           </span>
+                           <span class="film__info-item">
+                              <strong>Премьера</strong>
+                              <span>09.07.2020 (РФ)</span>
+                           </span>
+                        </div>
+                     </div>
+                     <!-- /.film__info -->
+                     <div class="film__rating">
+                        <div class="film__rating-counter">92%</div>
+                        <div class="film__rating-info">
+                           <h3 class="film__rating-title">Рейтинг зрителей</h3>
+                           <p class="film__rating-text">
+                              Средняя оценка: <span>4,5/5</span>
+                           </p>
+                           <p class="film__rating-text">
+                              Всего голосов: <span>4 350</span>
+                           </p>
+                        </div>
+                     </div>
+                     <!-- /.film__rating -->
+                  </div>
+                  <!-- /.film__about -->
+
+               </div>
+               <!-- /.film__row -->
+            </div>
+            <!-- /.container -->
+         </section>
+         <!-- /.film -->
+
+      </main>
+      <!-- /.main -->
+
    </div>
    <!-- /.wrapper -->
 
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="js/jquery.fancybox.min.js"></script>
    <script src="js/main.js"></script>
 
 </body>
