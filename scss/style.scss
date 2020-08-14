@@ -222,8 +222,6 @@ $mainLineHeight: 21px;
             margin-right: 10px;
             margin-bottom: 15px;
          }
-
-         &:first-child {}
       }
    }
 
@@ -258,6 +256,75 @@ $mainLineHeight: 21px;
          span {
             font-weight: bold;
          }
+      }
+   }
+}
+
+.cast {
+   &__top {
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      margin-bottom: 60px;
+   }
+
+   &__title {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
+      margin-right: 30px;
+      color: #363636;
+      cursor: pointer;
+   }
+
+   &__subtitle {
+      font-size: 24px;
+      line-height: 28px;
+      color: #a5a5a5;
+      cursor: pointer;
+   }
+
+   &__bottom {
+      padding-bottom: 65px;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 35px;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      flex-basis: 23%;
+   }
+
+   &__image {
+      margin-right: 20px;
+
+      img {
+         display: block;
+         width: 100px;
+         height: 100px;
+         object-fit: cover;
+         border-radius: 50%;
+      }
+   }
+
+   &__info {
+      font-size: 16px;
+      line-height: 19px;
+
+      h3 {
+         font-weight: bold;
+         color: #5671f6;
+         margin-bottom: 5px;
+      }
+
+      h2 {
+         color: #a5a5a5;
       }
    }
 }
@@ -429,6 +496,18 @@ $mainLineHeight: 21px;
          align-items: start;
       }
    }
+
+   .cast {
+      &__row {
+         flex-wrap: wrap;
+         margin-bottom: 0;
+      }
+
+      &__item {
+         flex-basis: 45%;
+         margin-bottom: 25px;
+      }
+   }
 }
 
 @media (max-width: 767px) {
@@ -452,7 +531,7 @@ $mainLineHeight: 21px;
 
    .film {
       &__row {
-         padding: 50px 0;
+         padding: 45px 0;
          flex-wrap: wrap;
          align-items: center;
          margin: 0 auto;
@@ -466,6 +545,24 @@ $mainLineHeight: 21px;
       &__about {
          order: 1;
          margin-top: 30px;
+      }
+   }
+}
+
+@media (max-width: 599px) {
+   .cast {
+      &__top {
+         padding-top: 45px;
+         margin-bottom: 45px;
+      }
+
+      &__bottom {
+         padding-bottom: 25px;
+      }
+
+      &__item {
+         flex-basis: 90%;
+         margin-bottom: 20px;
       }
    }
 }
