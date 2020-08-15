@@ -7,6 +7,7 @@
    <title>Ghostbusters</title>
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="css/slick.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -55,7 +56,7 @@
 
                   <div class="film__banner">
                      <div class="film__poster">
-                        <img src="img/poster.png" alt="poster">
+                        <img src="img/poster.jpg" alt="poster">
                         <a class="film__button" data-fancybox href="https://www.youtube.com/watch?v=ahZFCF--uRY"><span></span>Посмотреть трейлер</a>
                      </div>
                      <!-- /.film__poster -->
@@ -136,14 +137,14 @@
             <div class="container">
 
                <div class="cast__top">
-                  <h2 class="cast__title">Актеры</h2>
-                  <h2 class="cast__subtitle">Создатели</h2>
+                  <a href="#first-row" class="cast__title active">Актеры</a>
+                  <a href="#second-row" class="cast__title">Создатели</a>
                </div>
                <!-- /.cast__top -->
 
                <div class="cast__bottom">
 
-                  <div class="cast__row">
+                  <div class="cast__row active" id="first-row">
                      <div class="cast__item">
                         <div class="cast__image">
                            <img src="img/cast/cast-1.jpg" alt="cast">
@@ -187,7 +188,7 @@
                   </div>
                   <!-- /.cast__row -->
 
-                  <div class="cast__row">
+                  <div class="cast__row" id="second-row">
                      <div class="cast__item">
                         <div class="cast__image">
                            <img src="img/cast/cast-6.jpg" alt="cast">
@@ -239,6 +240,106 @@
          </section>
          <!-- /.cast -->
 
+         <section class="news">
+            <div class="container">
+               <h2 class="news__title">Новости по теме</h2>
+
+               <div class="news__row slider">
+                  <div class="news__item">
+                     <h3 class="news__date">31 марта 2020</h3>
+                     <p class="news__text">
+                        «Морбиуса» и «Охотников за привидениями» перенесли на следующий год
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">9 декабря 2019</h3>
+                     <p class="news__text">
+                        Наследники: Вышел дебютный трейлер новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">11 ноября 2019</h3>
+                     <p class="news__text">
+                        Новые «Охотники за привидениями» обзавелись названием
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">19 октября 2019</h3>
+                     <p class="news__text">
+                        Завершились съёмки новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">31 марта 2020</h3>
+                     <p class="news__text">
+                        «Морбиуса» и «Охотников за привидениями» перенесли на следующий год
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">9 декабря 2019</h3>
+                     <p class="news__text">
+                        Наследники: Вышел дебютный трейлер новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">11 ноября 2019</h3>
+                     <p class="news__text">
+                        Новые «Охотники за привидениями» обзавелись названием
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">19 октября 2019</h3>
+                     <p class="news__text">
+                        Завершились съёмки новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">31 марта 2020</h3>
+                     <p class="news__text">
+                        «Морбиуса» и «Охотников за привидениями» перенесли на следующий год
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">9 декабря 2019</h3>
+                     <p class="news__text">
+                        Наследники: Вышел дебютный трейлер новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">11 ноября 2019</h3>
+                     <p class="news__text">
+                        Новые «Охотники за привидениями» обзавелись названием
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+                  <div class="news__item">
+                     <h3 class="news__date">19 октября 2019</h3>
+                     <p class="news__text">
+                        Завершились съёмки новых «Охотников за привидениями»
+                     </p>
+                  </div>
+                  <!-- /.news__item -->
+               </div>
+               <!-- /.news__row slider -->
+
+               <div class="news__prev-arrow"><img src="img/left-arrow.svg" alt=""></div>
+               <div class="news__next-arrow"><img src="img/right-arrow.svg" alt=""></div>
+
+            </div>
+            <!-- /.container -->
+         </section>
+         <!-- /.news -->
+
       </main>
       <!-- /.main -->
 
@@ -247,6 +348,7 @@
 
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/jquery.fancybox.min.js"></script>
+   <script src="js/slick.min.js"></script>
    <script src="js/main.js"></script>
 
 </body>
